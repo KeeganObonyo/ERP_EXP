@@ -37,8 +37,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'accounts',
+    'authority',
 )
+AUTH_USER_MODEL = 'accounts.User'
 
+ADMIN_VIEW_PERMISSION_MODELS = [
+    'auth.User',
+]
+AUTHORITY_USE_SMART_CACHE = True
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
